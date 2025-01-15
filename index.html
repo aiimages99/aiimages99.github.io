@@ -1,130 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>aiimages99 - Photo Gallery of Ai Girls</title>
-  <style>
-    /* General Reset */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aiimages99 - Ai Girls Photo Gallery</title>
 
-    /* Header */
-    header {
-      text-align: center;
-      background: #333;
-      color: #fff;
-      padding: 1rem 0;
-    }
-
-    /* Gallery Section */
-    #gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      padding: 20px;
-    }
-
-    .photo {
-      position: relative;
-      overflow: hidden;
-      border: 2px solid #ddd;
-      border-radius: 5px;
-    }
-
-    .photo img {
-      width: 100%;
-      height: auto;
-      transition: transform 0.3s ease;
-    }
-
-    .photo img:hover {
-      transform: scale(1.1);
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      background: #333;
-      color: #fff;
-      padding: 1rem 0;
-    }
-
-    /* Lightbox (hidden by default) */
-    .lightbox {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-
-    .lightbox img {
-      max-width: 90%;
-      max-height: 80%;
-      border-radius: 10px;
-    }
-
-    .lightbox.show {
-      display: flex;
-    }
-  </style>
+    <!--styles-->
+    <link rel="stylesheet" href="/css/common.css">
 </head>
 <body>
-  <header>
-    <h1>aiimages99</h1>
-    <span>Photos Gallery of Ai Girls</span>
-  </header>
+    <header>
+        <h1>AI IMAGES 99</h1>
+    </header>
 
-  <main>
-    <section id="gallery">
-      <div class="photo">
-        <img src="/img/0000000001/1.jpg" alt="Photo 1">
-        <a href="/img/0000000001/1.jpg" download class="download-btn">download</a>
-      </div>
-      <div class="photo">
-        <img src="/img/0000000001/2.jpg" alt="Photo 2">
-      </div>
-      <div class="photo">
-        <img src="/img/0000000001/3.jpg" alt="Photo 3">
-      </div>
-      <div class="photo">
-        <img src="https://via.placeholder.com/300" alt="Photo 4">
-      </div>
-    </section>
-  </main>
+    <div class="scrollable-nav">
+        <a href="#">Ai Models</a>
+        <a href="#">Ai Girls</a>
+        <a href="#">Instagram Models</a>
+        <a href="#">Bollywood Actress</a>
+        <a href="#">Hollywood Actress</a>
+        <a href="#">Porn/Adults Actress</a>
+        <a href="#">K-Drama Actress</a>
+        <a href="#">K-Pop Models</a>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 Your Name. All Rights Reserved.</p>
-  </footer>
+    <div class="main-content">
+        
+    </div>
 
-  <div class="lightbox" id="lightbox">
-    <img src="" alt="Lightbox Image">
-  </div>
-
-  <script>
-    // Lightbox functionality
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = lightbox.querySelector('img');
-
-    document.querySelectorAll('#gallery .photo img').forEach((img) => {
-      img.addEventListener('click', () => {
-        lightboxImage.src = img.src;
-        lightbox.classList.add('show');
-      });
-    });
-
-    lightbox.addEventListener('click', () => {
-      lightbox.classList.remove('show');
-    });
-  </script>
+    <footer>
+        <p>&copy; 2025 Beautiful Photo Gallery | Created with ❤️ by <a href="#">You</a></p>
+    </footer>
+    
+    <!--script's-->
+    
 </body>
 </html>
