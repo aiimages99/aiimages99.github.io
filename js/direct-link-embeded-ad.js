@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         adsFrame.style.position = "relative";
         adsFrame.style.width = "100%";
         adsFrame.style.height = "100%"; // Customize height if needed
-        //adsFrame.style.min-height = "100px";
+        adsFrame.style.minHeight = "400px";
         adsFrame.style.paddingBottom = "25%"; // Adjust padding as required
   
         // Create the iframe element
