@@ -1,17 +1,128 @@
-<p>## Hi there 👋
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery</title>
+  <style>
+    /* General Reset */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
 
-<!--
-**aiimages99/aiimages99** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+    /* Header */
+    header {
+      text-align: center;
+      background: #333;
+      color: #fff;
+      padding: 1rem 0;
+    }
 
-Here are some ideas to get you started:
+    /* Gallery Section */
+    #gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
-</p>
+    .photo {
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .photo img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .photo img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: #333;
+      color: #fff;
+      padding: 1rem 0;
+    }
+
+    /* Lightbox (hidden by default) */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+
+    .lightbox.show {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Photo Gallery</h1>
+  </header>
+
+  <main>
+    <section id="gallery">
+      <div class="photo">
+        <img src="https://via.placeholder.com/300" alt="Photo 1">
+      </div>
+      <div class="photo">
+        <img src="https://via.placeholder.com/300" alt="Photo 2">
+      </div>
+      <div class="photo">
+        <img src="https://via.placeholder.com/300" alt="Photo 3">
+      </div>
+      <div class="photo">
+        <img src="https://via.placeholder.com/300" alt="Photo 4">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="Lightbox Image">
+  </div>
+
+  <script>
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = lightbox.querySelector('img');
+
+    document.querySelectorAll('#gallery .photo img').forEach((img) => {
+      img.addEventListener('click', () => {
+        lightboxImage.src = img.src;
+        lightbox.classList.add('show');
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('show');
+    });
+  </script>
+</body>
+</html>
