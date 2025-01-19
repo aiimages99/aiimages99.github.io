@@ -1,0 +1,17 @@
+.article {
+    margin: 10px;
+    background-color: rgb(228, 221, 214);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.article p {
+    padding-top: 10px;
+    font-size: medium;
+}
+
+.article span {
+    color: #ff8f27;
+    font-size: large;
+}
