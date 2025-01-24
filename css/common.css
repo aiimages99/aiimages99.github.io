@@ -133,3 +133,15 @@ h2 {
       display: none; 
     }
   }
+
+  .lazy-load {
+    /* Initial styles for lazy-loaded elements (e.g., placeholder) */
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .lazy-load.loaded {
+    /* Styles to apply when element is loaded */
+    opacity: 1;
+    visibility: visible;
+  }
